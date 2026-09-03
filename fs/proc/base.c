@@ -2445,8 +2445,8 @@ proc_map_files_readdir(struct file *file, struct dir_context *ctx)
 	up_read(&mm->mmap_sem);
 
 	for (i = 0; i < nr_files; i++) {
-+		char buf[4 * sizeof(long) + 2];	/* max: %lx-%lx\0 */
-+		unsigned int len;
+		char buf[4 * sizeof(long) + 2];	/* max: %lx-%lx\0 */
+		unsigned int len;
 
 		p = flex_array_get(fa, i);
 		len = snprintf(buf, sizeof(buf), "%lx-%lx", p->start, p->end);
