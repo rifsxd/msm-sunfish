@@ -524,6 +524,7 @@ KBUILD_CFLAGS += -fuse-ld=lld
 endif
 KBUILD_CPPFLAGS += -Qunused-arguments
 endif
+KBUILD_CFLAGS += -Wno-unused-variable
 
 RETPOLINE_CFLAGS_GCC := -mindirect-branch=thunk-extern -mindirect-branch-register
 RETPOLINE_VDSO_CFLAGS_GCC := -mindirect-branch=thunk-inline -mindirect-branch-register
